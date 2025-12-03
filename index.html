@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Hostel Leave Management System</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body onload="updateHeaderForSession();">
+
+<header>
+  <h1>🏠 Hostel Leave Management System</h1>
+  <p class="subtitle">Welcome to the Leave Management Portal</p>
+
+  <nav>
+    
+    <span id="loginStatus" style="margin-left:10px;"></span>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="card" style="text-align:center;">
+    <h2 style="color:#667eea;margin-bottom:8px;">Select an Option</h2>
+    <p style="margin-bottom:18px;color:#333">Choose an action below:</p>
+
+    <div style="display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+      <a class="btn" href="register.html">Register as Student/Admin</a>
+      <button class="btn" onclick="goApplyLeave()">Apply for Leave</button>
+      <button class="btn" onclick="goMyLeaves()">My Leave History</button>
+      <button class="btn" onclick="goStudentList()">View Registered Students</button>
+      <button class="btn" onclick="goAdminDashboard()">Admin Dashboard</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

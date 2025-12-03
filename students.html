@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Students</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body onload="protectStudentsPage(); updateStudentList(); updateHeaderForSession();">
+
+<header>
+  <h1>🏠 Hostel Leave Management System</h1>
+  <p class="subtitle">Registered Students</p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="apply_leave.html">Apply Leave</a>
+    <a href="students.html">Students</a>
+    <a href="my_leaves.html">My Leaves</a>
+    <span id="loginStatus" style="margin-left:10px;"></span>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="card">
+    <h2>Registered Students</h2>
+
+    <div class="form-group">
+      <label>Search (name / email / phone / room)</label>
+      <input type="text" id="studentSearch" oninput="updateStudentList()" />
+    </div>
+
+    <div id="studentList"></div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

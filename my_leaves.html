@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>My Leaves</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body onload="protectMyLeavesPage(); updateHeaderForSession();">
+
+<header>
+  <h1>🏠 Hostel Leave Management System</h1>
+  <p class="subtitle">My Leave History</p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="apply_leave.html">Apply Leave</a>
+
+    <a href="my_leaves.html">My Leaves</a>
+    <span id="loginStatus" style="margin-left:10px;"></span>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="card">
+    <h2>My Leave History</h2>
+
+    <div class="form-group">
+      <label>Your Name</label>
+      <input type="text" id="searchName" readonly />
+      <button class="btn" style="margin-top:10px;" onclick="searchMyLeaves()">Show My Leaves</button>
+    </div>
+
+    <div id="myLeavesList" style="margin-top:20px;"></div>
+  </div>
+
+  <div class="card">
+    <h2>Notifications</h2>
+    <div id="studentNotifs"></div>
+    <button class="btn" onclick="renderNotificationsList('studentNotifs')">Refresh Notifications</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

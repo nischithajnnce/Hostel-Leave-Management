@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Apply Leave</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body onload="protectApplyLeavePage(); updateHeaderForSession();">
+
+<header>
+  <h1>🏠 Hostel Leave Management System</h1>
+  <p class="subtitle">Apply for Leave</p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="apply_leave.html">Apply Leave</a>
+    <a href="my_leaves.html">My Leaves</a>
+    <span id="loginStatus" style="margin-left:10px;"></span>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="card">
+    <h2>Apply for Leave</h2>
+
+    <div class="success-msg" id="leaveSuccess"></div>
+    <div class="error-msg" id="leaveError"></div>
+
+    <div class="form-group">
+      <label>Name *</label>
+      <input type="text" id="leaveName" readonly />
+    </div>
+
+    <div class="form-group">
+      <label>Password *</label>
+      <input type="password" id="leavePass" />
+    </div>
+
+    <div class="form-group">
+      <label>From Date *</label>
+      <input type="date" id="fromDate" />
+    </div>
+
+    <div class="form-group">
+      <label>To Date *</label>
+      <input type="date" id="toDate" />
+    </div>
+
+    <div class="form-group">
+      <label>Reason *</label>
+      <textarea id="reason"></textarea>
+    </div>
+
+    <button class="btn" onclick="submitLeave()">Submit Leave Request</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

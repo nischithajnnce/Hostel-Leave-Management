@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body onload="updateHeaderForSession();">
+
+<header>
+  <h1>🏠 Hostel Leave Management System</h1>
+  <p class="subtitle">Login</p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="register.html">Register</a>
+    <a href="login.html">Login</a>
+    <a href="apply_leave.html">Apply Leave</a>
+    <a href="admin.html">Admin</a>
+    <a href="students.html">Students</a>
+    <a href="my_leaves.html">My Leaves</a>
+    <span id="loginStatus" style="margin-left:10px;"></span>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="card">
+    <h2>🔐 Login</h2>
+
+    <div class="error-msg" id="loginError"></div>
+
+    <div class="form-group">
+      <label>Name *</label>
+      <input type="text" id="loginName" />
+    </div>
+
+    <div class="form-group">
+      <label>Password *</label>
+      <input type="password" id="loginPass" />
+    </div>
+
+    <div class="form-group">
+      <label>Role *</label>
+      <select id="loginRole">
+        <option value="student">Student</option>
+        <option value="admin">Admin</option>
+      </select>
+    </div>
+
+    <button class="btn" onclick="loginUser()">Login</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

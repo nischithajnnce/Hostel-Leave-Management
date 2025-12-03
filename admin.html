@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body onload="if(protectAdminPage()){ updateAdmin(); renderNotificationsList('adminNotifs'); }">
+
+<header>
+  <h1>🏠 Hostel Leave Management System</h1>
+  <p class="subtitle">Admin Dashboard</p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="admin.html">Admin</a>
+    <a href="students.html">Students</a>
+    <a href="my_leaves.html">My Leaves</a>
+    <span id="loginStatus" style="margin-left:10px;"></span>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="stats">
+    <div class="stat-card"><h3 id="statTotal">0</h3><p>Total Requests</p></div>
+    <div class="stat-card"><h3 id="statPending">0</h3><p>Pending</p></div>
+    <div class="stat-card"><h3 id="statApproved">0</h3><p>Approved</p></div>
+    <div class="stat-card"><h3 id="statRejected">0</h3><p>Rejected</p></div>
+  </div>
+
+  <div class="card">
+    <h2>Manage Leave Requests</h2>
+    <div class="success-msg" id="adminSuccess"></div>
+    <div id="leaveList"></div>
+  </div>
+
+  <div class="card">
+    <h2>Notifications</h2>
+    <div id="adminNotifs"></div>
+    <button class="btn" onclick="renderNotificationsList('adminNotifs')">Refresh Notifications</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
